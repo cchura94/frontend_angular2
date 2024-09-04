@@ -26,7 +26,7 @@ export class ProductoComponent {
   }
 
   obtenerProductos(){
-    this.http.get('http://127.0.0.1:3000/producto').subscribe(
+    this.http.get('https://backjs.blumbit.net/producto').subscribe(
       (res: any) => {
         this.productos = res
       },
