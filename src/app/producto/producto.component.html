@@ -1,0 +1,42 @@
+<h1>Gestión Productos</h1>
+<h1>{{ titulo }}</h1>
+<h4>{{ subtitulo }}</h4>
+
+<p>{{ categorias }}</p>
+
+<ul>
+    @for (item of categorias; track $index) {
+        <li>{{ item }}</li>
+    }
+</ul>
+<select name="" id="">
+    @for (item of categorias; track $index) {
+        <option value="">{{ item }}</option>
+    }
+</select>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>NOMBRE</th>
+            <th>PRECIO</th>
+            <th>CANTIDAD</th>
+            <th>IMAGEN</th>
+            <th>DESCRIPCION</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of productos; track $index) {
+
+            <tr>
+                <td>{{ item.nombre }}</td>
+                <td>{{ item.precio }}</td>
+                <td>{{ item.cantidad }}</td>
+                <td> 
+                    <img [src]="item.imagen" alt="" width="100px">
+                </td>
+                <td>{{ item.descripcion }}</td>
+            </tr>
+        }
+    </tbody>
+</table>
