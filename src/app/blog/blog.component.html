@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+
+        @for (item of publicaciones; track $index) {
+        <div class="col-md-4">
+            <div class="card" style="">
+            <img [src]="item.cover_image" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ item.title }}</h5>
+                <p class="card-text">{{item.description}}</p>
+                <a href="#" class="btn btn-primary">Leer más</a>
+            </div>
+            </div>
+        </div>
+    }
+    </div>
+</div>
